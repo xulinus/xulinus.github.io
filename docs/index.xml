@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docs on lxu.se</title>
-    <link>https://xulinus.github.io/xulinus.github.io/docs/</link>
+    <link>https://xulinus.github.io/docs/</link>
     <description>Recent content in Docs on lxu.se</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 23 Jun 2024 21:46:18 +0200</lastBuildDate>
-    <atom:link href="https://xulinus.github.io/xulinus.github.io/docs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://xulinus.github.io/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Test</title>
-      <link>https://xulinus.github.io/xulinus.github.io/docs/test/</link>
+      <link>https://xulinus.github.io/docs/test/</link>
       <pubDate>Sun, 23 Jun 2024 21:46:18 +0200</pubDate>
-      <guid>https://xulinus.github.io/xulinus.github.io/docs/test/</guid>
+      <guid>https://xulinus.github.io/docs/test/</guid>
       <description>this is a test page # test page</description>
     </item>
   </channel>
