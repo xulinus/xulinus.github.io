@@ -1,4 +1,4 @@
-baseURL: "https://xulinus.github.io/xulinus.github.io/" 
+baseURL: "https://xulinus.github.io/" 
 languageCode: en-us
 title: lxu.se 
 theme: hugo-book
