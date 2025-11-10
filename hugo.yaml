@@ -1,8 +1,0 @@
-baseURL: "https://lxu.se/" 
-languageCode: en-us
-title: LXU  
-theme: hugo-book
-enableGitInfo: true
-
-params:
-  BookTheme: "light"
