@@ -12,7 +12,7 @@ permissions:
   id-token: write
 
 env:
-  PATH: "/home/runner/work/xulinus.github.io/xulinus.github.io/"
+  PWD: "/home/runner/work/xulinus.github.io/xulinus.github.io/"
 
 jobs:
   build:
@@ -39,21 +39,21 @@ jobs:
           ls
       - name: Pull Go dependencies
         run: |
-          cd $PATH/mdblog/
+          cd $PWD/mdblog/
           go get github.com/gomarkdown/markdown@latest
       - name: Copy MD 
         run: |
-          mkdir $PATH/mdblog/md
-          mkdir $PATH/mdblog/html
-          cp $PATH/md/* $PATH/mdblog/md/
+          mkdir $PWD/mdblog/md
+          mkdir $PWD/mdblog/html
+          cp $PWD/md/* $PWD/mdblog/md/
       - name: Make HTML 
         run: |
-          cd $PATH/mdblog/ 
+          cd $PWD/mdblog/ 
           go run main.go 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: $PATH/html/
+          path: $PWD/html/
 
   deploy:
     environment:
