@@ -41,7 +41,7 @@ jobs:
       - name: Make HTML 
         run: |
           cd /home/runner/work/xulinus.github.io/xulinus.github.io/mdblog/ 
-          go main.go 
+          go run main.go 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
