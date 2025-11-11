@@ -31,8 +31,7 @@ jobs:
           ls
       - name: Pull Go dependencies
         run: |
-          cd /home/runner/work/xulinus.github.io/xulinus.github.io/mdblog/
-          go get 
+          go get github.com/gomarkdown/markdown
       - name: Copy MD 
         run: |
           mkdir /home/runner/work/xulinus.github.io/xulinus.github.io/mdblog/md
