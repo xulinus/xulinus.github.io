@@ -32,7 +32,7 @@ jobs:
       - name: Pull Go dependencies
         run: |
           cd /home/runner/work/xulinus.github.io/xulinus.github.io/mdblog/
-          go mod tidy
+          go get 
       - name: Copy MD 
         run: |
           mkdir /home/runner/work/xulinus.github.io/xulinus.github.io/mdblog/md
