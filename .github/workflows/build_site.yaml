@@ -24,7 +24,7 @@ jobs:
       # Clone the code that builds the webpages
       - name: Clone code repo 
         env: 
-          TOKEN ${{ secrets.CLONE_TOKEN }}
+          TOKEN: ${{ secrets.CLONE_TOKEN }}
         run: |
           git clone https://github.com/xulinus/mdblog
             --branch main \
