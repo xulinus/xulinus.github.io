@@ -23,10 +23,18 @@ jobs:
       
       # Clone the code that builds the webpages
       - name: Clone code repo 
-        #env: 
-        #  TOKEN ${{ secrets.CLONE_TOKEN }}
+        env: 
+          TOKEN ${{ secrets.CLONE_TOKEN }}
         run: |
           git clone https://github.com/xulinus/mdblog
-            -- branch main \
-            -- depth 1 \
-            -- quiet
+            --branch main \
+            --single-branch \
+            --depth 1 \
+            --quiet \
+            --config core.askPass=echo \
+            --config credential.helper= \
+            --config credential.username=xulinus \
+            --config credential.useHttpPath=true
+          cd mdblog/
+          ls
+
