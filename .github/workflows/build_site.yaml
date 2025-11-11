@@ -35,15 +35,15 @@ jobs:
           ls
       - name: Copy MD 
         run: |
-          mkdir /mdblog/md 
-          mkdur /mdblog/html
-          cp md/* /mdblog/
+          mkdir /home/runner/work/xulinus.github.io/xulinus.github.io/mdblog/md
+          mkdir /home/runner/work/xulinus.github.io/xulinus.github.io/mdblog/html
+          cp /home/runner/work/xulinus.github.io/xulinus.github.io/md/* /home/runner/work/xulinus.github.io/xulinus.github.io/mdblog/md/
       - name: Make HTML 
-        run: go run /mdblog/main.go 
+        run: go run //home/runner/work/xulinus.github.io/xulinus.github.io/mdblog/main.go 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: /mdblog/html/
+          path: /home/runner/work/xulinus.github.io/xulinus.github.io/mdblog/html/
 
   deploy:
     environment:
