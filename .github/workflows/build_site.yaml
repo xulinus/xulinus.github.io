@@ -11,13 +11,16 @@ permissions:
   pages: write
   id-token: write
 
+env:
+  PATH: "/home/runner/work/xulinus.github.io/xulinus.github.io/"
+
 jobs:
   build:
     runs-on: ubuntu-latest
     
     steps:
       - uses: actions/checkout@v5
-      - name: Setup Go ${{ matrix.go-version }}
+      - name: Setup Go v.12.5.x
         uses: actions/setup-go@v5
         with:
           go-version: '1.25.x' 
@@ -36,21 +39,21 @@ jobs:
           ls
       - name: Pull Go dependencies
         run: |
-          cd /home/runner/work/xulinus.github.io/xulinus.github.io/mdblog/
+          cd $PATH/mdblog/
           go get github.com/gomarkdown/markdown@latest
       - name: Copy MD 
         run: |
-          mkdir /home/runner/work/xulinus.github.io/xulinus.github.io/mdblog/md
-          mkdir /home/runner/work/xulinus.github.io/xulinus.github.io/mdblog/html
-          cp /home/runner/work/xulinus.github.io/xulinus.github.io/md/* /home/runner/work/xulinus.github.io/xulinus.github.io/mdblog/md/
+          mkdir $PATH/mdblog/md
+          mkdir $PATH/mdblog/html
+          cp $PATH/md/* $PATH/mdblog/md/
       - name: Make HTML 
         run: |
-          cd /home/runner/work/xulinus.github.io/xulinus.github.io/mdblog/ 
+          cd $PATH/mdblog/ 
           go run main.go 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: /home/runner/work/xulinus.github.io/xulinus.github.io/mdblog/html/
+          path: $PATH/html/
 
   deploy:
     environment:
