@@ -44,7 +44,7 @@ jobs:
       - name: Copy MD 
         run: |
           mkdir $PWD/mdblog/md
-          mkdir $PWD/mdblog/html
+          mkdir -p $PWD/mdblog/html/posts/
           cp $PWD/md/* $PWD/mdblog/md/
       - name: Make HTML 
         run: |
