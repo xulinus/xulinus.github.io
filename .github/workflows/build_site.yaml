@@ -50,6 +50,8 @@ jobs:
         run: |
           cd $PWD/mdblog/ 
           go run main.go 
+      - name: Copy assets
+        run: cp -r $PWD/mdblog/assets/css/ $PWD/mdblog/assets/fonts/ $PWD/mdblog/html/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
